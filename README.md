@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Guia Homens Líderes - Ebook Gratuito</title>
+  <style>
+    /* ------------------- CORES PRINCIPAIS ------------------- */
+    :root {
+      --cinza-escuro: #1a1a1a;
+      --cinza-medio: #333333;
+      --cinza-claro: #f5f5f5;
+      --dourado: #c9a66b;
+      --dourado-escuro: #a6894e;
+      --azul-petroleo: #0f3d52;
+      --branco: #ffffff;
+    }
+
+    /* ------------------- RESET E BASE ------------------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--cinza-escuro);
+      color: var(--branco);
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* ------------------- CABEÇALHO ------------------- */
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      background: linear-gradient(to bottom, var(--cinza-escuro), var(--azul-petroleo));
+      border-bottom: 2px solid var(--dourado);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: var(--branco);
+      margin-bottom: 15px;
+      line-height: 1.3;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    }
+
+    h1 span {
+      color: var(--dourado);
+      font-weight: 600;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      color: var(--cinza-claro);
+      max-width: 800px;
+      margin: 0 auto 30px;
+    }
+
+    /* ------------------- FORMULÁRIO MAILERLITE (IFRAME) ------------------- */
+    .form-container {
+      background-color: var(--cinza-medio);
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+      text-align: center;
+      margin: 30px auto;
+      max-width: 600px;
+      border: 1px solid var(--dourado-escuro);
+      overflow: hidden;
+    }
+
+    .mailerlite-iframe {
+      width: 100%;
+      height: 320px;
+      border: none;
+      background: var(--cinza-medio);
+      border-radius: 6px;
+    }
+
+    .disclaimer {
+      color: var(--cinza-claro);
+      font-size: 0.9rem;
+      margin-top: 15px;
+      opacity: 0.9;
+    }
+
+    /* ------------------- CONTEÚDO PRINCIPAL ------------------- */
+    section {
+      padding: 30px 20px;
+      background-color: var(--cinza-escuro);
+    }
+
+    h2 {
+      color: var(--dourado);
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    h2::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: var(--dourado);
+      margin: 10px auto;
+    }
+
+    .content-box {
+      background-color: #2a2a2a;
+      padding: 25px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      border-left: 4px solid var(--dourado);
+    }
+
+    .content-box ul {
+      list-style-type: none;
+      margin: 20px 0;
+    }
+
+    .content-box ul li {
+      margin-bottom: 12px;
+      padding-left: 30px;
+      position: relative;
+      font-size: 1.05rem;
+    }
+
+    .content-box ul li::before {
+      content: "✓";
+      color: var(--dourado);
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+
+    .bonus {
+      background-color: #0f3d52;
+      border-left-color: var(--dourado) !important;
+    }
+
+    .author {
+      max-width: 700px;
+      margin: 40px auto;
+      font-style: italic;
+      text-align: center;
+      padding: 20px;
+      border: 1px dashed var(--dourado-escuro);
+      border-radius: 10px;
+    }
+
+    .author strong {
+      color: var(--dourado);
+    }
+
+    /* ------------------- FAQ ------------------- */
+    .faq-item {
+      margin-bottom: 20px;
+      background-color: #2a2a2a;
+      padding: 18px;
+      border-radius: 8px;
+      border-left: 3px solid var(--dourado);
+    }
+
+    .faq-question {
+      font-weight: bold;
+      color: var(--dourado);
+    }
+
+    /* ------------------- ÚLTIMO CTA ------------------- */
+    .final-cta {
+      text-align: center;
+      padding: 50px 20px;
+      background: linear-gradient(to bottom, var(--azul-petroleo), var(--cinza-escuro));
+      margin-top: 20px;
+    }
+
+    .final-cta h2 {
+      font-size: 2.2rem;
+      color: var(--branco);
+    }
+
+    .final-cta p {
+      font-size: 1.2rem;
+      color: var(--cinza-claro);
+      margin: 15px 0;
+    }
+
+    .final-cta .cta-button {
+      background: linear-gradient(to right, var(--dourado), var(--dourado-escuro));
+      color: var(--cinza-escuro);
+      font-weight: bold;
+      font-size: 1.2rem;
+      padding: 16px 30px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: all 0.3s;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* ------------------- RODAPÉ ------------------- */
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: var(--cinza-claro);
+      font-size: 0.9rem;
+      border-top: 1px solid #444;
+      margin-top: 30px;
+    }
+
+    footer a {
+      color: var(--dourado);
+      text-decoration: none;
+    }
+
+    /* ------------------- RESPONSIVO ------------------- */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+      .subtitle {
+        font-size: 1rem;
+      }
+      .form-container {
+        padding: 30px 20px;
+      }
+      .mailerlite-iframe {
+        height: 380px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- CABEÇALHO -->
+  <header>
+    <div class="container">
+      <h1>Você Está Liderando Sua Vida… Ou <span>Sobrevivendo a Ela?</span></h1>
+      <p class="subtitle">
+        Baixe agora o guia gratuito <strong>"Homens Líderes: Guia Cristão para o Sucesso no Casamento, Finanças e Negócios"</strong> e descubra os 3 pilares bíblicos que todo homem deve dominar para ter autoridade real em casa, nos negócios e na fé.
+      </p>
+    </div>
+  </header>
+
+  <!-- FORMULÁRIO INTEGRADO COM MAILERLITE -->
+  <div class="container">
+    <div class="form-container">
+      <p><strong>Deixe seu Melhor e-mail para Receber seu ebook Totalmente Gratuito.</strong></p>
+
+      <iframe 
+        src="<div class="ml-embedded" data-form="yYIQwL"></div>" 
+        frameborder="0" 
+        scrolling="no" 
+        class="mailerlite-iframe">
+      </iframe>
+
+      <p class="disclaimer">✅ 100% gratuito | ✅ Zero spam | ✅ Cancelamento fácil</p>
+    </div>
+
+    <!-- RESTANTE DO CONTEÚDO -->
+    <section>
+      <h2>Por Que Esse Guia é Diferente?</h2>
+      <div class="content-box">
+        <p>A maioria dos livros sobre homens fala de conquista. Este guia fala de <strong>identidade</strong>.</p>
+        <p>Porque nenhum homem pode liderar onde quer que seja — casa, empresa, igreja — se não souber quem ele é diante de Deus.</p>
+        <p>Neste material exclusivo, você vai descobrir:</p>
+        <ul>
+          <li>Como restaurar sua autoridade espiritual sem cair na religiosidade vazia</li>
+          <li>O segredo bíblico para um casamento cheio de intimidade</li>
+          <li>Por que 9 entre 10 homens cristãos falham nas finanças — e como escapar</li>
+          <li>Como alinhar seus negócios ao propósito de Deus — sem perder competitividade</li>
+          <li>O erro fatal que destrói lares, empresas e ministérios (e como evitá-lo)</li>
+        </ul>
+      </div>
+
+      <h2>O Que Você Vai Encontrar no Guia?</h2>
+      <div class="content-box">
+        <p><strong>📖 Capítulo 1:</strong> O Chamado do Homem Verdadeiro<br>
+        <em>"Não líder por cargo, mas por convicção."</em></p>
+      </div>
+      <div class="content-box">
+        <p><strong>📖 Capítulo 2:</strong> O Marido que Reza Antes de Cobrar<br>
+        Como liderar seu lar com amor, coragem e humildade.</p>
+      </div>
+      <div class="content-box">
+        <p><strong>📖 Capítulo 3:</strong> Dinheiro, Fé e Responsabilidade<br>
+        A visão bíblica sobre prosperidade — sem enganação nem maldição.</p>
+      </div>
+      <div class="content-box">
+        <p><strong>📖 Capítulo 4:</strong> Negócios com Propósito, Não Apenas Lucro<br>
+        Como honrar a Deus nos acordos, decisões e contratações.</p>
+      </div>
+      <div class="content-box">
+        <p><strong>📖 Capítulo 5:</strong> O Erro que Está Destruindo os Líderes<br>
+        (Você provavelmente já cometeu — e nem percebeu.)</p>
+      </div>
+      <div class="content-box bonus">
+        <p><strong>🎁 BÔNUS EXCLUSIVO:</strong> Checklist “7 Dias para Restaurar Sua Liderança”<br>
+        Um plano prático para aplicar imediatamente.</p>
+      </div>
+
+      <h2>Quem Escreveu Isso?</h2>
+      <div class="author">
+        Meu nome é <strong>Fabiano Lucas</strong>, sou empresário, pai, líder e apaixonado pelo propósito de Deus para o homem verdadeiro.<br><br>
+        Já vivi na pele a crise de identidade que atinge tantos homens hoje:<br>
+        Chefe no trabalho, ausente em casa.<br>
+        Frente à família, vazio por dentro.<br><br>
+        Foi nesse momento que comecei a buscar respostas não em técnicas de sucesso, mas na <strong>Palavra de Deus com profundidade real</strong>.<br><br>
+        Hoje ajudo milhares de homens a recuperarem sua identidade, autoridade e propósito — porque o mundo não precisa de mais chefes ocupados.<br>
+        Precisa de <strong>homens de Deus, de verdade</strong>.
+      </div>
+
+      <h2>Perguntas Frequentes</h2>
+      <div class="faq-item">
+        <p class="faq-question">🔹 É realmente gratuito?</p>
+        <p>Sim. Este guia foi criado como presente para homens que querem mudar. Zero custo. Zero risco.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-question">🔹 Vou receber spam depois?</p>
+        <p>Jamais. Você receberá apenas conteúdos valiosos sobre liderança masculina, casamento e fé. Pode cancelar a qualquer momento.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-question">🔹 Em que formato vem o ebook?</p>
+        <p>PDF (funciona em celular, tablet e computador).</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-question">🔹 Vale a pena mesmo?</p>
+        <p>Se você é um homem que deseja crescer em integridade, sim. Este conteúdo já impactou centenas de líderes, pais e empresários.</p>
+      </div>
+    </section>
+
+    <!-- ÚLTIMO CTA -->
+    <section class="final-cta">
+      <h2>Transforme Sua Vida Agora</h2>
+      <p>Milhares de homens já baixaram este guia.</p>
+      <p><strong>Agora é a sua vez.</strong></p>
+      <button class="cta-button">Sim, Eu Quero Meu Ebook Grátis</button>
+    </section>
+  </div>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <p>&copy; <script>document.write(new Date().getFullYear())</script> Homens Líderes | Todos os direitos reservados</p>
+    <p><a href="#politica">Política de Privacidade</a> | Contato: <a href="mailto:fale@fabianolucas.com">fale@fabianolucas.com</a></p>
+  </footer>
+<!-- MailerLite Universal -->
+<script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '1826161');
+</script>
+<!-- End MailerLite Universal -->
+</body>
+</html>
